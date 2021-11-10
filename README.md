@@ -1,9 +1,8 @@
-# Programa Top v__ -  Tiempo _______
+# Programa Top v12 -  Tiempo Parcial
 
 ## Mentores 👩🏻‍🏫👨🏼‍🏫
-- [Nombre del mentor](profiles/mentor-principal.md)
-- Mentor 2
-- Mentor 3
+- [Goye](profiles/mentor-principal.md)
+- Tania
 
 ## Estudiantes 👩🏻‍💻🧑🏼‍💻
 - Estudiante 1
