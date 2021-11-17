@@ -5,9 +5,9 @@
 - Tania
 
 ## Estudiantes 👩🏻‍💻🧑🏼‍💻
-- Estudiante 1
-- Estudiante 2
-- Estudiante 3
+- Carlos
+- Cesar
+- Ernesto
 - ...
 
 ## Como es un dia de estudio durante el programa TOP?
