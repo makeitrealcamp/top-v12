@@ -8,7 +8,8 @@
 - Carlos
 - Cesar
 - Ernesto
-- ...
+- Gian
+- Jhon
 
 ## Como es un dia de estudio durante el programa TOP?
 
