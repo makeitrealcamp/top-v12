@@ -1,54 +1,59 @@
 # Programa Top v12 -  Tiempo Parcial
 
 ## Mentores 👩🏻‍🏫👨🏼‍🏫
-- [Goye](profiles/mentor-principal.md)
-- Tania
+***
+
+&nbsp;&nbsp;&nbsp;&nbsp;**Goye**
+
+![avatar](https://images.weserv.nl/?url=avatars.githubusercontent.com/u/11186639?v=4&h=80&w=80&fit=cover&mask=circle&maxage=7d
+)
+
+<a href="https://co.linkedin.com/in/carlosgoyeneche/?locale=en_US"><img align="left" src="https://cdn-icons-png.flaticon.com/128/174/174857.png" alt="Goye | LinkedIn" width="21px"/></a>
+<a href="https://www.instagram.com/goyesays/"><img align="left" style="margin-left: 10px" src="https://cdn-icons-png.flaticon.com/128/1409/1409946.png" alt="Goye | Instagram" width="21px"/></a>
+</br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;**Tania**
+
+![avatar](https://images.weserv.nl/?url=avatars.githubusercontent.com/u/64998244?v=4&h=80&w=80&fit=cover&mask=circle&maxage=7d
+)
+
+<a href="https://co.linkedin.com/in/tania-de-la-torre"><img align="left" src="https://cdn-icons-png.flaticon.com/128/174/174857.png" alt="Tania | LinkedIn" width="21px"/></a>
+<a href="https://www.instagram.com/tanyalej/"><img style="margin-left: 10px" align="left" src="https://cdn-icons-png.flaticon.com/128/1409/1409946.png" alt="Tania | Instagram" width="21px"/></a>
+</br>
 
 ## Estudiantes 👩🏻‍💻🧑🏼‍💻
-- Estudiante 1
-- Estudiante 2
-- Estudiante 3
-- ...
+***
 
-## Como es un dia de estudio durante el programa TOP?
+### *Grupo 1*
+- Giancarlo Araya
+- Victoria Mi
+- Junior Almeyda
+- John Achata
 
-### 8:30 am - 10:00 am:
-Clase Magistral con mentor principal
+### *Grupo 2*
+- Elias Jurado
+- Miriam Retamozo
+- Felipe Ramirez
+- Carlos Viera
 
-### 10:00 am - 1:30 pm:
-Pueden ocurrir varias actividades en este rango de tiempo
-- Clase de habilidades blandas
-- Clase de ingles
-- Reuniones con mentores de apoyo
-- Trabajar, codificar, en tu proyecto grupal/personal
-- Resolver dudas con los mentores.
-- Planeacion del sprint
-- Demo del entregable anterior
-- Retrospectiva del spint
-- Terminar los retos o misiones que son asignados en clase
+### *Grupo 3*
+- Fernando Rafael
+- Cesar Arroyo
+- Alfredo Huerta
+- Jose Cueva
+- Manuel Rossi
 
-### 01:00 pm - 2:30 pm
-Tiempo para almorzar
-
-### 02:30 pm - 03:30 pm:
-Clase Magistral con mentor principal
-
-### 03:30 pm - 6:30 pm:
-Pueden ocurrir varias actividades en este rango de tiempo
-- Clase de habilidades blandas
-- Clase de ingles
-- Reuniones con mentores de apoyo
-- Trabajar, codificar, en tu proyecto grupal/personal
-- Resolver dudas con los mentores.
-- Planeacion del sprint
-- Demo del entregable anterior
-- Retrospectiva del spint
-- Terminar los retos o misiones que son asignados en clase
+### *Grupo 4*
+- Leonardo Moina
+- Glisse Lisbeth
+- Ernesto Pariona
+- Omar Cruz
 
 ## Entregables proyecto grupal 💻🤝
+***
 
 - **Modulo 1**: Wireframes y backlog del proyecto e Historias de usuario.
-- **Modulo 2**: Mockups del proyecto y Layout en HTML, CSS.
+- **Modulo 2**: Mockups del proyecto y Layout en CSS.
 - **Modulo 3**: Implementación de los mockups en react.
 - **Modulo 4**: Navegacion de la aplicación con datos MOCK Y Despliegue en netlify.
 - **Modulo 5**: Diseno de base de datos, Modelo de datos y servidor express.

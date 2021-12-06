@@ -1,25 +1,32 @@
-### Descripción
-[//]: <> (Aca debe ir la descripcion del PullRequest, que es? que hace?)
+# What does this PR do?
+- 
 
+# Where should the reviewer start?
+- 
+[//]: <> (Important files as `file/path.js`)
 
-### Feeling
-[//]: <> (Como te sientes con este PR? la solucion que entregas como te hace sentir?)
-- [ ] 🤙 Solucion rapida
-- [ ] 👌 Terminado y listo
-- [ ] 🤞 Espero que esto funcione, por favor revisar cuidadosamente
+# How should this be manually tested?
+- 
+[//]: <> (Steps to reproduce it)
 
-### Tickets
-[//]: <> (El numero del ticket asociado a este PR)
+# Any background context you want to provide?
+[//]: <> (Something you want to mention?)
 
-### Cómo probar?
-[//]: <> (Pasos necesarios para probar esta funcionalidad)
+# What are the relevant tickets?
+- [{ticket}](https://www.atlassian.com/es/software/{ticket})
 
-### Screenshots (si es aplicable)
-[//]: <> (Capturas de pantalla que ayuden a entender que hiciste en este PR)
+# Boy Scout Rule (Improvements log)
 
-### Scope
+<!-- The rule of the boy scouts is: “Always leave the campground cleaner than you found it”. Write between the apostrophes any improvement you made to the code (Add tests, clean styles, remove imports, remove unused files or libraries, refactoring code or others). Try to spend between 15 to 30 minutes to check, think and apply what you improved on the code. -->
 
-- [ ] 🐞 Bugfix (non-breaking changes que resuelve un problema
-- [ ] 💚 Mejora (non-breaking change que agrega/modifica funcionalidad a una característica existente)
-- [ ] ⚡️ Nueva característica/feature (non-breaking change que agrega una nueva característica)
-- [ ] ⚠️ Breaking change (cambio que no es compatible con versiones anteriores y/o cambia la funcionalidad actual)
+```
+
+```
+
+# Screenshots
+
+# Checklist
+
+- [ ] I added the necessary documentation, if appropriate.
+- [ ] I added tests to prove that my fix is effective or my feature works.
+- [ ] I reviewed existing Pull Requests before submitting mine.
