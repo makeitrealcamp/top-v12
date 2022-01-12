@@ -1,24 +1,26 @@
-import React, { useState, useEffect, useMemo, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
 const Root = () => {
   const [pokeData, setPokeData] = useState(null);
   const [name, setName] = useState('World');
-  const isFetchEnable = false;
+  const isFetchEnable = true;
 
   var handleClick = useCallback(() => {
     setName('Class')
   }, []);
 
   useEffect(() => {
-    if (isFetchEnable) {
-      fetch('https://pokeapi.co/api/v2/pokemon/squirtle').then((response) => {
-        return response.json();
-      }).then((data) => {
-        console.log(data);
-        setPokeData(data)
-      });
+    async function getPokeData () {
+      try {
+        const response = await fetch('https://pokeapi.co/api/v2/pokemon/squirtle');
+        const data = await response.json();
+        // throw new Error("there is a problem calling the api");
+        setPokeData(data);
+      } catch(e) {
+        console.error(e);
+      }
     }
-    return () => console.log('unmounted');
+    getPokeData();
   }, [isFetchEnable]);
 
   return (<div>
