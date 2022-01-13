@@ -11,11 +11,14 @@ const Root = () => {
 
   useEffect(() => {
     async function getPokeData () {
+      const fetcher = async (pathName) => {
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pathName}`);
+        return await response.json();
+      }
       try {
-        const response = await fetch('https://pokeapi.co/api/v2/pokemon/squirtle');
-        const data = await response.json();
+        const [squirtle, ditto ] = await Promise.all([fetcher('squirtle'), fetcher('ditto')]);
         // throw new Error("there is a problem calling the api");
-        setPokeData(data);
+        setPokeData(ditto);
       } catch(e) {
         console.error(e);
       }
