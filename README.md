@@ -12,13 +12,13 @@
 <a href="https://www.instagram.com/goyesays/"><img align="left" style="margin-left: 10px" src="https://cdn-icons-png.flaticon.com/128/1409/1409946.png" alt="Goye | Instagram" width="21px"/></a>
 </br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;**Tania**
+&nbsp;&nbsp;&nbsp;&nbsp;**Carolina**
 
-![avatar](https://images.weserv.nl/?url=avatars.githubusercontent.com/u/64998244?v=4&h=80&w=80&fit=cover&mask=circle&maxage=7d
+![avatar](https://images.weserv.nl/?url=avatars.githubusercontent.com/u/65572735?v=4&h=80&w=80&fit=cover&mask=circle&maxage=7d
 )
 
-<a href="https://co.linkedin.com/in/tania-de-la-torre"><img align="left" src="https://cdn-icons-png.flaticon.com/128/174/174857.png" alt="Tania | LinkedIn" width="21px"/></a>
-<a href="https://www.instagram.com/tanyalej/"><img style="margin-left: 10px" align="left" src="https://cdn-icons-png.flaticon.com/128/1409/1409946.png" alt="Tania | Instagram" width="21px"/></a>
+<a href="https://www.linkedin.com/in/carosalazar28/"><img align="left" src="https://cdn-icons-png.flaticon.com/128/174/174857.png" alt="Caro | LinkedIn" width="21px"/></a>
+<a href="https://www.instagram.com/carosalazar28/"><img style="margin-left: 10px" align="left" src="https://cdn-icons-png.flaticon.com/128/1409/1409946.png" alt="Caro | Instagram" width="21px"/></a>
 </br>
 
 ## Estudiantes 👩🏻‍💻🧑🏼‍💻
