@@ -1,6 +1,6 @@
 {
   "name": "routing-cli-app",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
