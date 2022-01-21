@@ -3,7 +3,6 @@
 // * node
 // * yarn
 // * hub
-// This follows `docs/deployment-strategy.md` on the backend repo
 
 const {
   createPullRequest,
@@ -96,7 +95,7 @@ rl.question(
       pushBranch(branchName);
 
       console.log(`🏷  Pushing ${releaseConfig.prefix} tag...`);
-      pushTag(`Web-v${newVersion}`);
+      pushTag(`v${newVersion}`);
 
       if (releaseType === PROD_RELEASE || releaseType === PROD_HOTFIX) {
         createProdPullRequests(newVersion);
