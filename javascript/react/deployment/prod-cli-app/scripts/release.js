@@ -96,7 +96,7 @@ rl.question(
       pushBranch(branchName);
 
       console.log(`🏷  Pushing ${releaseConfig.prefix} tag...`);
-      pushTag(`Web-v${newVersion}`);
+      pushTag(`v${newVersion}`);
 
       if (releaseType === PROD_RELEASE || releaseType === PROD_HOTFIX) {
         createProdPullRequests(newVersion);
