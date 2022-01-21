@@ -32,7 +32,7 @@
 
 ### *Grupo 2*
 - Elias Jurado
-- Miriam Retamozo
+- Jose Cueva
 - Felipe Ramirez
 - Carlos Viera
 
@@ -40,7 +40,6 @@
 - Fernando Rafael
 - Cesar Arroyo
 - Alfredo Huerta
-- Jose Cueva
 - Manuel Rossi
 
 ### *Grupo 4*
