@@ -82,11 +82,6 @@ function updateVersion(newVersion) {
     stdio: 'inherit',
   });
 
-  console.log('📱 Increasing iOs version...');
-  execSync('./scripts/version-ios.sh', {
-    stdio: 'inherit',
-  });
-
   return newVersion;
 }
 
