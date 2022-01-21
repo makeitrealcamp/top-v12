@@ -3,7 +3,6 @@
 // * node
 // * yarn
 // * hub
-// This follows `docs/deployment-strategy.md` on the backend repo
 
 const {
   createPullRequest,
