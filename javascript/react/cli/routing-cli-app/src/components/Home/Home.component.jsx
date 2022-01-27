@@ -1,4 +1,4 @@
-import logo from "../../logo.svg";
+import logo from "logo.svg";
 import { Link, Outlet } from "react-router-dom";
 
 function Home() {

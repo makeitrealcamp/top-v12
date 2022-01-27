@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
-import Root from "./components/Root";
-import Video from "./components/Video";
-import NotFound from "./components/NotFound";
-import "./App.css";
+import Home from "components/Home";
+import Root from "components/Root";
+import Video from "components/Video";
+import NotFound from "components/NotFound";
+import "App.css";
 
 function App() {
   return (
