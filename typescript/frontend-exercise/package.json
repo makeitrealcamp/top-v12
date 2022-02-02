@@ -1,0 +1,15 @@
+{
+  "name": "typescript-frontend-exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "typescript": "^4.5.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

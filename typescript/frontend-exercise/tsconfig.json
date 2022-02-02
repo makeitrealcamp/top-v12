@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist",
+    "rootDir": ".",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "typeRoots" : [
+      "./node_modules/@types",
+    ],
+  },
+  "include": [
+    "exercise/**/*.ts",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
