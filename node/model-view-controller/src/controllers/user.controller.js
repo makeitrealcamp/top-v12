@@ -1,16 +1,65 @@
 const User = require("../models/user.models");
 
 module.exports = {
-  show(req, res) {
-    const { userId } = req.params;
-    User.findById(userId)
-      .populate("posts", "title body")
-      .then((user) => res.status(200).json(user))
-      .catch((err) => res.status(404).json(err));
+  async show(req, res) {
+    try {
+      const { userId } = req.params;
+      // Uso del populate cuando ya tengo una referencia desde el modelo y quiero acceder
+      // a algunos campos de esa referencia
+      const user = await User.findById(userId).populate({
+        path: "posts",
+        select: "title",
+      });
+      // const user = await User.findById(userId);
+      if (!user) {
+        throw new Error("User not found");
+      }
+      res.status(200).json({ message: "User found", data: user });
+    } catch (error) {
+      console.log("err", error);
+      res.status(404).json({ message: "User not found" });
+    }
   },
-  create(req, res) {
-    User.create(req.body)
-      .then((user) => res.status(201).json(user))
-      .catch((err) => res.status(400).json(err));
+  async create(req, res) {
+    try {
+      const { email, password } = req.body;
+      const user = await User.create({ email, password });
+      res.status(201).json({ data: user });
+    } catch (error) {
+      res.status(404).json({ message: "User not found" });
+    }
+  },
+  async list(req, res) {
+    try {
+      // Uso del aggregate para unir tablas y crear una referencia en el documento
+      // const users = await User.aggregate([
+      //   {
+      //     $lookup: {
+      //       from: "posts",
+      //       localField: "_id",
+      //       foreignField: "author",
+      //       as: "posts",
+      //     },
+      //   },
+      //   {
+      //     $project: {
+      //       _id: 1,
+      //       title: 1,
+      //       body: 1,
+      //       posts: 1,
+      //     },
+      //   },
+      // ]);
+      const users = await User.find();
+
+      if (!users) {
+        throw new Error("Client not found");
+      }
+
+      res.status(200).json({ message: "Users list found", data: users });
+    } catch (error) {
+      console.log("err", error);
+      res.status(404).json({ message: "User not found" });
+    }
   },
 };

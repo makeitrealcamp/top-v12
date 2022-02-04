@@ -4,6 +4,7 @@ const postSchema = new Schema(
   {
     title: String,
     body: String,
+    published: Boolean,
     author: {
       type: Schema.Types.ObjectId,
       ref: "User",
