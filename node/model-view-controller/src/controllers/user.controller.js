@@ -26,6 +26,7 @@ module.exports = {
       const user = await User.create({ email, password });
       res.status(201).json({ data: user });
     } catch (error) {
+      console.log("error", error);
       res.status(404).json({ message: "User not found" });
     }
   },

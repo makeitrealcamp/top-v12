@@ -15,7 +15,7 @@ module.exports = {
       const post = await Post.create({ ...req.body, author: user.id });
 
       // Si tengo una referencia puedo hacer push para poder popular el post desde user
-      // user.posts.push(post);
+      user.posts.push(post);
       await user.save({ validateBeforeSave: false });
 
       res.status(201).json(post);

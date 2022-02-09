@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
 
 function connect() {
-  mongoose.connect("mongodb://localhost:27017/references", {
+  const url = process.env.MONGO_URL;
+
+  mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
