@@ -1,4 +1,9 @@
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 const User = require("../models/user.models");
+
+// Recuerden dejar almacenada está variable como una variable de entorno
+const SECRET = "secret_key";
 
 module.exports = {
   async show(req, res) {
@@ -23,10 +28,41 @@ module.exports = {
   async create(req, res) {
     try {
       const { email, password } = req.body;
-      const user = await User.create({ email, password });
-      res.status(201).json({ data: user });
+      const encryptPassword = await bcrypt.hash(password, 8);
+
+      const user = await User.create({ email, password: encryptPassword });
+
+      console.log("here", user);
+      const token = jwt.sign({ id: user._id }, SECRET, {
+        expiresIn: 60 * 60 * 24,
+      });
+      console.log("token", token);
+      res.status(201).json({ token });
     } catch (error) {
-      console.log("error", error);
+      res.status(404).json({ message: "User not found" });
+    }
+  },
+  async signin(req, res) {
+    try {
+      const { email, password } = req.body;
+      const user = await User.findOne({ email });
+
+      if (!user) {
+        throw new Error("User or password does not valid");
+      }
+
+      const isPasswordValid = await bcrypt.compare(password, user.password);
+
+      if (!isPasswordValid) {
+        throw new Error("User or password does not valid");
+      }
+
+      const token = jwt.sign({ id: user._id }, SECRET, {
+        expiresIn: 60 * 60 * 24,
+      });
+
+      res.status(201).json({ token });
+    } catch (error) {
       res.status(404).json({ message: "User not found" });
     }
   },
