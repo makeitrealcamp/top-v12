@@ -12,7 +12,7 @@ const app = express();
 require('dotenv').config();
 
 // Connection to mongo
-mongoose.connect("mongodb://localhost:27017/auth-db", {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/auth-db', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
