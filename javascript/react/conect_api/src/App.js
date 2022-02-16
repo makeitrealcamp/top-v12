@@ -1,22 +1,23 @@
 import { useState, useEffect } from "react";
+import GoogleLogin from "react-google-login";
 import axios from "axios";
 
 import "./App.css";
 
-function Users({ users }) {
-  return (
-    <section>
-      <h1>Users</h1>
-      {users.map((user) => {
-        return (
-          <article key={user.id}>
-            <h3>{user.name}</h3>
-          </article>
-        );
-      })}
-    </section>
-  );
-}
+// function Users({ users }) {
+//   return (
+//     <section>
+//       <h1>Users</h1>
+//       {users.map((user) => {
+//         return (
+//           <article key={user.id}>
+//             <h3>{user.name}</h3>
+//           </article>
+//         );
+//       })}
+//     </section>
+//   );
+// }
 
 function Posts({ posts }) {
   return (
@@ -31,6 +32,62 @@ function Posts({ posts }) {
         );
       })}
     </section>
+  );
+}
+
+function CreateLoginGoogle() {
+  const [loginData, setLoginData] = useState(
+    localStorage.getItem("loginData")
+      ? JSON.parse(localStorage.getItem("loginData"))
+      : null
+  );
+
+  const handleLogin = async (googleData) => {
+    console.log("success", googleData);
+
+    try {
+      const data = await axios({
+        method: "post",
+        baseURL: process.env.REACT_APP_SERVER_URL,
+        url: "/users/signin",
+        data: {
+          token: googleData.tokenId,
+        },
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      setLoginData(data);
+    } catch (error) {
+      console.log("error", error);
+    }
+  };
+
+  const handleFailure = (error) => {
+    console.error("error", error);
+  };
+
+  const handleLogout = () => {
+    setLoginData(null);
+  };
+
+  return (
+    <>
+      {loginData ? (
+        <>
+          <h1>Logueado</h1>
+          <button onClick={handleLogout}>logout</button>
+        </>
+      ) : (
+        <GoogleLogin
+          clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+          buttonText="Iniciar con Google"
+          onSuccess={handleLogin}
+          onFailure={handleFailure}
+          cookiePolicy={"single_host_origin"}
+        />
+      )}
+    </>
   );
 }
 
@@ -65,7 +122,7 @@ function CreateUser() {
       setLoading(false);
     }
   };
-  console.log("loa", loading);
+  // console.log("loa", loading);
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -108,7 +165,7 @@ function App() {
         baseURL: process.env.REACT_APP_SERVER_URL,
         url: "/users",
       });
-      console.log("data", data);
+      // console.log("data", data);
     } catch (error) {
       console.log("err", error);
     }
@@ -117,16 +174,18 @@ function App() {
   useEffect(() => {
     getData();
   }, []);
-  const usersMock = [
-    {
-      id: 1,
-      name: "Caro",
-    },
-    {
-      id: 2,
-      name: "Angie",
-    },
-  ];
+
+  // Esta data mock ya se puede reemplazar por el request que hacemos a /users
+  // const usersMock = [
+  //   {
+  //     id: 1,
+  //     name: "Caro",
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Angie",
+  //   },
+  // ];
 
   const postsMock = [
     {
@@ -139,10 +198,14 @@ function App() {
   const handleCreateUser = () => setCreateUser((previous) => !previous);
   return (
     <div className="App">
-      <Users users={usersMock} />
+      {/* <Users users={usersMock} /> */}
       <Posts posts={postsMock} />
-      <button onClick={handleCreateUser}>Crear un usuario</button>
+      <button onClick={handleCreateUser} className="Form-create_user">
+        Crear un usuario
+      </button>
       {createUser ? <CreateUser /> : null}
+      <br />
+      <CreateLoginGoogle />
     </div>
   );
 }

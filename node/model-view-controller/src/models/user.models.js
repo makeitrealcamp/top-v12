@@ -8,8 +8,9 @@ const userSchema = new Schema(
     },
     password: {
       type: String,
-      required: true,
+      // required: true,
     },
+    tokenGoogleAuth: { type: String },
     posts: {
       type: [{ type: Schema.Types.ObjectId, ref: "Post" }],
     },

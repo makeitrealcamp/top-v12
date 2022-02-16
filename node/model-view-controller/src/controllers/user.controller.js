@@ -1,5 +1,6 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const { OAuth2Client } = require("google-auth-library");
 const User = require("../models/user.models");
 
 // Recuerden dejar almacenada está variable como una variable de entorno
@@ -44,24 +45,37 @@ module.exports = {
   },
   async signin(req, res) {
     try {
-      const { email, password } = req.body;
-      const user = await User.findOne({ email });
+      // const { email, password } = req.body;
+
+      const { token } = req.body;
+
+      const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
+
+      const ticket = await client.verifyIdToken({
+        idToken: token,
+        audience: process.env.CLIENT_ID,
+      });
+
+      const { email } = ticket.getPayload();
+
+      let user = await User.findOne({ email });
 
       if (!user) {
-        throw new Error("User or password does not valid");
+        user = await User.create({ email });
+        // throw new Error("User or password does not valid");
       }
 
-      const isPasswordValid = await bcrypt.compare(password, user.password);
+      // const isPasswordValid = await bcrypt.compare(password, user.password);
 
-      if (!isPasswordValid) {
-        throw new Error("User or password does not valid");
-      }
+      // if (!isPasswordValid) {
+      //   throw new Error("User or password does not valid");
+      // }
 
-      const token = jwt.sign({ id: user._id }, SECRET, {
+      const tokenJWT = jwt.sign({ id: user._id }, SECRET, {
         expiresIn: 60 * 60 * 24,
       });
 
-      res.status(201).json({ token });
+      res.status(201).json({ tokenJWT });
     } catch (error) {
       res.status(404).json({ message: "User not found" });
     }
