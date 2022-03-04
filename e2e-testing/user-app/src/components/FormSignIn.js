@@ -44,7 +44,7 @@ export function FormSignIn({
           placeholder="Password for the account"
           required
         />
-        <ButtonSend>Send Form</ButtonSend>
+        <ButtonSend data-cy="submit">Send Form</ButtonSend>
         <p>Or</p>
         <Link to="/sign-up" className="Link__signup">
           Create Account
