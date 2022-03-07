@@ -1,0 +1,23 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true,
+    "cypress/globals": true
+  },
+  "extends": ["eslint:recommended", "react-app"],
+  "plugins": ["prettier", "cypress"],
+  "rules": {
+    "no-console": 1,
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"]
+  }
+}
