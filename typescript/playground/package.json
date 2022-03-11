@@ -1,0 +1,15 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "Practicing typescript by challenges",
+  "main": "index.js",
+  "scripts": {
+    "typecheck": "tsc"
+  },
+  "author": "Goye",
+  "license": "ISC",
+  "dependencies": {
+    "@type-challenges/utils": "^0.1.1",
+    "typescript": "^4.6.2"
+  }
+}
