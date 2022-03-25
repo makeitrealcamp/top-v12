@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { SnackbarProvider } from 'notistack';
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -8,7 +10,9 @@ import { AuthContextProvider } from './store/AuthContext';
 ReactDOM.render(
   <React.StrictMode>
     <AuthContextProvider>
-      <App />
+      <SnackbarProvider maxSnack={3}>
+        <App />
+      </SnackbarProvider>
     </AuthContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
