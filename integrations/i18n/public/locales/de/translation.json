@@ -1,0 +1,9 @@
+{
+  "description": {
+    "part1": "Bearbeiten <1>src/App.js</1> und speichern, um neu zu laden.",
+    "part2": "Lernen React"
+  },
+  "video": "Seite im Aufbau",
+  "welcome": "Hallo! {{name}}",
+  "notFound": "Autsch! Hier ist nichts"
+}

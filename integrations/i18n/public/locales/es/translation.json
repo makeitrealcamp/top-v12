@@ -1,0 +1,9 @@
+{
+  "description": {
+    "part1": "Edita <1>src/App.js</1> y guarda para recargar.",
+    "part2": "Aprende React"
+  },
+  "video": "Página en construcción ",
+  "welcome": "Hola! {{name}}",
+  "notFound": "¡Ouch! No hay nada por aquí"
+}
