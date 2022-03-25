@@ -49,6 +49,10 @@ export function FormSignIn({
         <Link to="/sign-up" className="Link__signup">
           Create Account
         </Link>
+
+        <Link to="/password-recovery" className="Link__signup">
+          Forgot Password
+        </Link>
       </FormContainer>
     </>
   );

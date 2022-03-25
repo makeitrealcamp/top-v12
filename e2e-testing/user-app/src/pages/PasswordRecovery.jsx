@@ -19,7 +19,7 @@ function PasswordRecovery() {
       await axios({
         method: 'POST',
         baseURL: process.env.REACT_APP_SERVER_URL,
-        url: '/users/password-recovery',
+        url: '/users/recovery-password',
         data: { email },
       });
       enqueueSnackbar(

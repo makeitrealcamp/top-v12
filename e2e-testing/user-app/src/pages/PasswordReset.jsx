@@ -35,7 +35,7 @@ function PasswordRecoveryReset() {
         await axios({
           method: 'PUT',
           baseURL: process.env.REACT_APP_SERVER_URL,
-          url: '/users/password-reset',
+          url: '/users/reset-password',
           data: { newPassword },
           headers: {
             Authorization: `Bearer ${token}`,
