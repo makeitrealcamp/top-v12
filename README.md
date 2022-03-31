@@ -32,6 +32,11 @@
 - John Achata
 - Carlos Viera
 
+### _Grupo 2_
+
+- Aldair Huamani Cusi
+- Tony Ojeda
+
 ### _Grupo 3_
 
 - Fernando Rafael
