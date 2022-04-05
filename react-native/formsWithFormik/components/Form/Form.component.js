@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {Text, View, TextInput, Alert} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {Button} from 'react-native-paper';
@@ -7,10 +7,10 @@ import styles from './Form.styles';
 import * as Yup from 'yup';
 
 const App = () => {
-  this.emailInput = null;
+  const emailInput = useRef(null);
   const safeAreaInsets = useSafeAreaInsets();
   return (
-    <View style={{...useSafeAreaInsets, paddingTop: safeAreaInsets.top + 200}}>
+    <View style={{...styles.container, paddingTop: safeAreaInsets.top + 200}}>
       <Text style={styles.title}>Formik x React Native</Text>
       <Formik
         initialValues={{name: '', email: ''}}
@@ -41,7 +41,7 @@ const App = () => {
               onSubmitEditing={() => {
                 // on certain forms, it is nice to move the user's focus
                 // to the next input when they press enter.
-                this.emailInput.focus();
+                emailInput.current.focus();
               }}
             />
             {props.touched.name && props.errors.name ? (
@@ -53,7 +53,7 @@ const App = () => {
               value={props.values.email}
               placeholder="Email Address"
               style={styles.input}
-              ref={el => (this.emailInput = el)}
+              ref={emailInput}
             />
             {props.touched.email && props.errors.email ? (
               <Text style={styles.error}>{props.errors.email}</Text>
