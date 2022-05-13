@@ -1,0 +1,35 @@
+enum ProductType {
+  GAMING_PC
+  BIKE
+  DRONE
+}
+
+enum BikeType {
+  KIDS
+  MOUNTAIN
+  ELECTRIC
+  BEACH
+}
+
+type Product {
+  name: String!,
+  price: Float!,
+  image: String!,
+  type: ProductType!,
+  createdBy: User!,
+  description: String,
+  liquidCooled: Boolean,
+  range: String,
+  bikeType: BikeType
+}
+
+input NewProductInput {
+  name: String!,
+  price: Float!,
+  image: String!,
+  type: ProductType!,
+  description: String,
+  liquidCooled: Boolean,
+  bikeType: BikeType,
+  range: String
+}
